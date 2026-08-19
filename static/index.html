@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assam Protected Areas & Policy Expert - Agentic RAG</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="logo-area">
+                <span class="logo-emoji">🦏</span>
+                <div>
+                    <h1>Assam Protected Areas & Policy Expert</h1>
+                    <p class="subtitle">Agentic RAG Assistant • Wildlife Conservation & Policy Insights</p>
+                </div>
+            </div>
+            <div class="status-indicator">
+                <span class="indicator-dot connected"></span>
+                <span class="indicator-text">Agent System Active</span>
+            </div>
+        </header>
+
+        <!-- Main Dashboard Layout -->
+        <main class="dashboard-main">
+            <!-- Left Panel: Info, Ingest & Stats -->
+            <section class="control-panel">
+                <!-- About Card -->
+                <div class="card about-card">
+                    <h3>Assam Conservation Policy</h3>
+                    <p>
+                        Assam is home to world-famous protected areas including <strong>Kaziranga</strong>, <strong>Manas</strong>, and <strong>Pobitora</strong>. Protecting these habitats involves balancing ecological security with the needs of surrounding local communities.
+                    </p>
+                    <p>
+                        A major current policy focus is the <strong>Eco-Sensitive Zone (ESZ) rationalization</strong>, where the government is proposing site-specific buffers (minimum 1 km) to allow civic development, while conservationists warn against blocking critical wildlife flood migration corridors.
+                    </p>
+                </div>
+
+                <!-- Database Stats Card -->
+                <div class="card stats-card">
+                    <h3>Database Status</h3>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-value" id="db-points-count">...</span>
+                            <span class="stat-label">Total Facts Stored</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value" id="db-status">Checking</span>
+                            <span class="stat-label">Vector Store</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dynamic Ingest Card -->
+                <div class="card ingest-card">
+                    <h3>Live URL Ingest</h3>
+                    <p class="card-desc">Found a new report or news article? Paste the URL below to scrape and add it to the agent's memory in real-time.</p>
+                    <form id="ingest-form">
+                        <input type="url" id="ingest-url" placeholder="https://news-site.com/article-url" required>
+                        <button type="submit" id="ingest-submit-btn">Ingest & Memorize</button>
+                    </form>
+                    <div class="ingest-log-container hidden" id="ingest-log-box">
+                        <div class="log-header">
+                            <span>Ingestion Log</span>
+                            <span class="spinner" id="ingest-spinner"></span>
+                        </div>
+                        <pre id="ingest-log-text">Initializing ingester agent...</pre>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Right Panel: Chat Assistant -->
+            <section class="chat-panel">
+                <div class="chat-container">
+                    <!-- Message History -->
+                    <div class="chat-messages" id="chat-history">
+                        <div class="message assistant-message">
+                            <div class="message-content">
+                                <p>Hello! I am your <strong>Assam Protected Areas & Policy Expert</strong>.</p>
+                                <p>My database is pre-loaded with official park details (Kaziranga, Manas, Pobitora), environmental guidelines, and key Supreme Court orders on Eco-Sensitive Zones. I can also search the web live to pull the latest news, updates, and policy debates surrounding conservation in Assam.</p>
+                                <p>What would you like to explore today?</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Suggestions -->
+                    <div class="quick-suggestions">
+                        <button class="suggestion-btn" data-query="Explain the Kaziranga Eco-Sensitive Zone (ESZ) controversy.">What is the ESZ controversy?</button>
+                        <button class="suggestion-btn" data-query="Why does the Assam Government want to limit the Kaziranga ESZ to 1 km? What is their official stance?">Assam Government Stance</button>
+                        <button class="suggestion-btn" data-query="What are the main concerns of conservationists and activists regarding the 1 km buffer zone? Why are animal corridors important?">Conservationist Concerns</button>
+                        <button class="suggestion-btn" data-query="What did the Supreme Court rule in April 2023 regarding Eco-Sensitive Zones? How does it affect this case?">Supreme Court Rulings</button>
+                        <button class="suggestion-btn" data-query="Who is Pranab Doley and why was he arrested in relation to the Kaziranga protests?">Activist Protests & Arrests</button>
+                    </div>
+
+                    <!-- Input Area -->
+                    <footer class="chat-input-area">
+                        <form id="chat-form">
+                            <textarea id="chat-input" placeholder="Ask a question about the controversy or latest news..." required rows="1"></textarea>
+                            <button type="submit" id="chat-submit-btn">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                                </svg>
+                            </button>
+                        </form>
+                    </footer>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="/static/app.js"></script>
+</body>
+</html>

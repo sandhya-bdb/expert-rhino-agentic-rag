@@ -1,0 +1,8 @@
+fastapi>=0.110.0
+uvicorn>=0.28.0
+duckduckgo-search>=6.2.4
+qdrant-client>=1.18.0
+openai-agents[litellm]>=0.17.2
+python-dotenv>=1.2.2
+requests>=2.34.0
+gradio>=4.44.0,<5.0.0

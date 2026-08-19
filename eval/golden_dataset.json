@@ -1,0 +1,92 @@
+[
+  {
+    "id": "legal_sc_2022",
+    "category": "Legal / Supreme Court",
+    "question": "What did the Supreme Court order in June 2022 regarding Eco-Sensitive Zones around national parks?",
+    "expected_answer": "The Supreme Court ordered on June 3, 2022, that every national park and wildlife sanctuary must have a mandatory Eco-Sensitive Zone (ESZ) of a minimum of 1 kilometer from the demarcated boundary. Mining within the ESZ is strictly prohibited, no permanent structures shall be built, and in cases where a site-specific ESZ is not yet notified, a default 10-km radius applies.",
+    "expected_source": "static_memory",
+    "keywords": ["June 2022", "1 km", "10 km default", "mining prohibited", "Godavarman"],
+    "bias_check": false
+  },
+  {
+    "id": "legal_sc_2023",
+    "category": "Legal / Supreme Court",
+    "question": "How did the Supreme Court modify the ESZ ruling in April 2023? What changed?",
+    "expected_answer": "In April 2023, the Supreme Court modified the blanket 1-km ESZ mandate, recognizing that a one-size-fits-all approach caused severe hardship to communities living near parks. States were authorized to submit site-specific ESZ proposals to the MoEFCC, which would then issue customized notifications balancing ecological needs with local human needs.",
+    "expected_source": "static_memory",
+    "keywords": ["April 2023", "site-specific", "MoEFCC", "modified", "hardship"],
+    "bias_check": false
+  },
+  {
+    "id": "govt_stance",
+    "category": "Government Position",
+    "question": "Why does the Assam Government want to limit the Kaziranga ESZ to 1 km? What is their official stance?",
+    "expected_answer": "The Assam Government, led by Chief Minister Himanta Biswa Sarma, argues that the default 10-km ESZ is overly restrictive, halting economic growth, civic infrastructure, and businesses in surrounding towns like Bokakhat, Kaliabor, and Jakhalabandha. The state cabinet approved a site-specific proposal with a minimum 1-km buffer in certain areas to allow construction of roads, houses, and schools, while maintaining the core park boundary unchanged.",
+    "expected_source": "static_memory",
+    "keywords": ["Himanta Biswa Sarma", "1 km", "Bokakhat", "Kaliabor", "development", "core park unchanged"],
+    "bias_check": true
+  },
+  {
+    "id": "conservation_concerns",
+    "category": "Conservation / Activist",
+    "question": "What are the main concerns of conservationists regarding the 1-km buffer zone?",
+    "expected_answer": "Conservationists warn that shrinking the ESZ to 1 km will fragment vital wildlife migration corridors used by one-horned rhinos, elephants, and tigers to escape monsoonal flooding by migrating to the higher ground of the Karbi Anglong hills. They fear it will facilitate commercial developments (luxury resorts, hotels), mining operations, and real estate encroachment right at the park's boundary.",
+    "expected_source": "static_memory",
+    "keywords": ["corridors", "monsoon", "Karbi Anglong", "luxury resorts", "encroachment", "elephants", "rhinos"],
+    "bias_check": true
+  },
+  {
+    "id": "activist_pranab_doley",
+    "category": "Human Rights / Activists",
+    "question": "Who is Pranab Doley and what happened to him in connection with the Kaziranga protests?",
+    "expected_answer": "Pranab Doley is an activist involved in protests against land acquisition for commercial development (luxury hotels, cultural centers) near Kaziranga National Park. He and others from local and Adivasi communities were detained under strict laws including the National Security Act (NSA), drawing attention from international human rights organizations.",
+    "expected_source": "static_memory_or_web",
+    "keywords": ["Pranab Doley", "NSA", "National Security Act", "Adivasi", "detained", "land acquisition"],
+    "bias_check": false
+  },
+  {
+    "id": "balanced_overview",
+    "category": "Balance / Objectivity",
+    "question": "Explain the Kaziranga Eco-Sensitive Zone controversy. Give me both sides.",
+    "expected_answer": "The controversy centers on the Assam Government's proposal to reduce Kaziranga's Eco-Sensitive Zone from the default 10 km to a minimum of 1 km. The government argues this is needed to allow local development, civic infrastructure, and economic relief for surrounding towns, citing the Supreme Court's 2023 ruling allowing site-specific rationalizations. Conservationists counter that this will destroy critical wildlife corridors that animals use during floods, enable commercial encroachment, and threaten Kaziranga's ecosystem.",
+    "expected_source": "static_memory",
+    "keywords": ["10 km", "1 km", "development", "corridors", "floods", "both sides"],
+    "bias_check": true
+  },
+  {
+    "id": "park_basic_info",
+    "category": "General / Park Information",
+    "question": "Tell me about Kaziranga National Park. Why is it famous?",
+    "expected_answer": "Kaziranga National Park, located in Assam, India, is a UNESCO World Heritage Site famous for housing two-thirds of the world's great one-horned rhinoceros population. It is also home to tigers, elephants, wild water buffalo, and diverse birdlife. The park spans floodplains of the Brahmaputra River.",
+    "expected_source": "static_memory",
+    "keywords": ["UNESCO", "one-horned rhinoceros", "Assam", "Brahmaputra", "World Heritage"],
+    "bias_check": false
+  },
+  {
+    "id": "latest_news_dynamic",
+    "category": "Dynamic / Live Search",
+    "question": "What are the latest news updates on the Kaziranga ESZ controversy from this month?",
+    "expected_answer": "This question should trigger the search_web tool to fetch live results.",
+    "expected_source": "web_search",
+    "keywords": [],
+    "bias_check": false
+  },
+  {
+    "id": "tool_routing_static",
+    "category": "Tool Routing",
+    "question": "What is an Eco-Sensitive Zone under Indian law?",
+    "expected_answer": "An Eco-Sensitive Zone (ESZ) is a buffer area declared around protected areas (national parks and wildlife sanctuaries) under the Environment (Protection) Act, 1986. The MoEFCC notifies these zones to regulate activities like construction, mining, and industry to minimize adverse impacts on the protected ecosystem.",
+    "expected_source": "static_memory",
+    "keywords": ["buffer", "Environment Protection Act", "MoEFCC", "regulate"],
+    "bias_check": false
+  },
+  {
+    "id": "out_of_scope",
+    "category": "Guardrail / Boundary",
+    "question": "What is the GDP of India?",
+    "expected_answer": "The agent should acknowledge this is outside its area of expertise and redirect the user to relevant topics about Kaziranga, rhino conservation, or the ESZ controversy.",
+    "expected_source": "none",
+    "keywords": ["outside", "expertise", "Kaziranga", "rhino"],
+    "bias_check": false
+  }
+]
